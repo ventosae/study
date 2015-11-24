@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width", initial-scale=1.0>
+	<title>Main study - Video</title>
+
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+	</script>
+	<script src="mejs/jquery.js"></script>
+	<script src="mejs/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="mejs/mediaelementplayer.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet"  href="mejs/mejs-skins.css">
+</head>
+<body>
+	<h1>This is the great video</h1>
+	<!-- Video -->
+	<div class='wrapper'>
+	<video class="mejs-ted" controls width="852" height="480" >
+     	<source src="bridge.mp4" type="video/mp4">
+         <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
+	</video>
+	<h2> This is the great song!</h2>
+	<audio controls>
+	<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3">
+	</audio>
+	 </div>
+	 <script>
+	 $('audio,video') .mediaelementplayer({
+	 	success: function(player,node) {
+	 		$('#' + node.id + '-mode') .html('mode: ' +player.pluginType);},
+	 		startLanguage: 'en',
+	 		translationSelector: true
+		 });
+	 </script>
+
+</body>
+</html>

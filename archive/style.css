@@ -1,0 +1,20 @@
+ body {
+  font-family: 'Nunito', sans-serif;
+  color: rgb(74,124,175);
+}
+.wrapper {
+  max-width: 50%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 15px
+  ;text-align:center;
+}
+h1, h2 {
+  margin: 30px auto;
+  text-align: center;
+}
+
+video, audio, .mejs-treehouse {
+margin: 0 auto;
+}
